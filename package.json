@@ -4,7 +4,7 @@
   "description": "Satosa Auth0 Action",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"test\""
+    "build": "tsc src/index.ts --outFile dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/satosa-io/auth0-action/issues"
   },
-  "homepage": "https://github.com/satosa-io/auth0-action#readme"
+  "homepage": "https://github.com/satosa-io/auth0-action#readme",
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "typescript": "^5.1.5"
+  }
 }
