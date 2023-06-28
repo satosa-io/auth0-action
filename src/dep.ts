@@ -1,5 +1,3 @@
-module.exports = {
-  sayHello() {
-    console.log('hello');
-  }
+export function sayHello() {
+  console.log('hello');
 }
