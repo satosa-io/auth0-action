@@ -4,7 +4,9 @@
   "description": "Satosa Auth0 Action",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsc src/index.ts --outFile dist/index.js"
+    "build:ts": "tsc src/*.ts --outDir dist",
+    "build:bundle": "rollup dist/index.js -o action.js --plugin @rollup/plugin-node-resolve --plugin @rollup/plugin-commonjs",
+    "build": "npm run build:ts && npm run build:bundle"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,10 @@
   },
   "homepage": "https://github.com/satosa-io/auth0-action#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@types/node": "^20.3.2",
+    "rollup": "^3.25.3",
     "typescript": "^5.1.5"
   }
 }
