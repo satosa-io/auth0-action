@@ -4,6 +4,7 @@
   "description": "Satosa Auth0 Action",
   "main": "src/index.ts",
   "scripts": {
+    "typecheck": "tsc src/*.ts",
     "build:ts": "tsc src/*.ts --outDir dist",
     "build:bundle": "rollup dist/index.js -o action.js -f cjs --plugin @rollup/plugin-node-resolve --plugin @rollup/plugin-commonjs",
     "build": "npm run build:ts && npm run build:bundle"
