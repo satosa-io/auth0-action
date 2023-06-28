@@ -4,8 +4,9 @@
   "description": "Satosa Auth0 Action",
   "main": "src/index.ts",
   "scripts": {
-    "typecheck": "tsc src/*.ts",
-    "build:ts": "tsc src/*.ts --outDir dist",
+    "lint": "eslint src/*.ts --fix",
+    "typecheck": "tsc",
+    "build:ts": "tsc --outDir dist",
     "build:bundle": "rollup dist/index.js -o action.js -f cjs --plugin @rollup/plugin-node-resolve --plugin @rollup/plugin-commonjs",
     "build": "npm run build:ts && npm run build:bundle"
   },
@@ -23,7 +24,13 @@
     "@rollup/plugin-commonjs": "^25.0.2",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@types/node": "^20.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "eslint": "^8.43.0",
+    "eslint-config-standard-with-typescript": "^35.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
     "rollup": "^3.25.3",
-    "typescript": "^5.1.5"
+    "typescript": "^4.8.4"
   }
 }

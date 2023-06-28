@@ -1,5 +1,5 @@
-import { sayHello } from './dep';
+import { sayHello } from './dep'
 
-function main() {
-  sayHello();
+export function main (): void {
+  sayHello()
 }
