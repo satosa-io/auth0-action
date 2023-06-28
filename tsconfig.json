@@ -1,7 +1,9 @@
 {
-  "include": [ "src/**/*.ts" ],
+  "include": [ "rollup.config.ts", "src/**/*.ts" ],
   "compilerOptions": {
+    "moduleResolution": "node",
     "strictNullChecks": true,
-    "target": "ES2017"
+    "target": "ES2017",
+    "strict": true
   }
 }

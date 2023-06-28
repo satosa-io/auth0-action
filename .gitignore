@@ -2,3 +2,4 @@
 dist
 node_modules
 action.js
+rollup.config.js
