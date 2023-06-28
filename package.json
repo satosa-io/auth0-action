@@ -7,7 +7,7 @@
     "lint": "eslint src/*.ts --fix",
     "typecheck": "tsc",
     "build:ts": "tsc --outDir dist",
-    "build:bundle": "rollup dist/index.js -o action.js -f cjs --plugin @rollup/plugin-node-resolve --plugin @rollup/plugin-commonjs",
+    "build:bundle": "rollup dist/index.js -o action.js -f cjs --exports named --plugin @rollup/plugin-node-resolve --plugin @rollup/plugin-commonjs",
     "build": "npm run build:ts && npm run build:bundle"
   },
   "repository": {
