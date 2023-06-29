@@ -2,7 +2,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 
-const IGNORE_BUNDLE_MODULES = ['zod']
+const IGNORE_BUNDLE_MODULES = ['axios', 'zod']
 
 const nodeResolveOptions = {
   resolveOnly (moduleName: string): boolean {

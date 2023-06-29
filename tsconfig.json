@@ -1,6 +1,7 @@
 {
   "include": [ "rollup.config.ts", "src/**/*.ts" ],
   "compilerOptions": {
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "strictNullChecks": true,
     "removeComments": true,

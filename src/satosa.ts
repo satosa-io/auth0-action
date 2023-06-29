@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import axios from 'axios'
 
 const Configuration = z.object({
   serviceUrl: z.string().url(),
@@ -20,9 +21,10 @@ export function createConfiguration (serviceUrl: string, apiKey: string): z.infe
 
 export async function getDocument (config: z.infer<typeof Configuration>, documentId: string): Promise<z.infer<typeof Document>> {
   if (documentId === '') throw new Error('documentId is missing')
-  const response = await fetch(config.serviceUrl + '/documents/' + documentId, {
-    method: 'GET'
+  const response = await axios({
+    method: 'GET',
+    url: config.serviceUrl + '/documents/' + documentId,
+    headers: { Authorization: `Bearer ${config.apiKey}` }
   })
-  const body = await response.json()
-  return Document.parse(body)
+  return Document.parse(response.data)
 }
