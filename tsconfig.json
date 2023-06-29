@@ -3,6 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "strictNullChecks": true,
+    "removeComments": true,
     "target": "ES2017",
     "strict": true
   }

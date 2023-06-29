@@ -1,5 +1,6 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
+import replace from '@rollup/plugin-replace'
 
 const IGNORE_BUNDLE_MODULES = ['zod']
 
@@ -10,6 +11,14 @@ const nodeResolveOptions = {
   }
 }
 
+const replaceConfig = {
+  values: {
+    'process.env.SATOSA_SERVICE_URL': process.env.SATOSA_SERVICE_URL ? `"${process.env.SATOSA_SERVICE_URL}"` : 'undefined',
+    'process.env.SATOSA_DOCUMENT_ID': process.env.SATOSA_DOCUMENT_ID ? `"${process.env.SATOSA_DOCUMENT_ID}"` : 'undefined'
+  },
+  preventAssignment: true
+}
+
 export default {
   input: 'dist/src/index.js',
   output: {
@@ -18,6 +27,7 @@ export default {
     exports: 'named'
   },
   plugins: [
+    replace(replaceConfig),
     nodeResolve(nodeResolveOptions),
     commonjs()
   ]
