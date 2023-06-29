@@ -13,8 +13,11 @@ const nodeResolveOptions = {
 
 const replaceConfig = {
   values: {
+    'process.env.CALLBACK_URL': process.env.CALLBACK_URL ? `"${process.env.CALLBACK_URL}"` : 'undefined',
+    'process.env.SATOSA_ORGANIZATION_ID': process.env.SATOSA_ORGANIZATION_ID ? `"${process.env.SATOSA_ORGANIZATION_ID}"` : 'undefined',
     'process.env.SATOSA_SERVICE_URL': process.env.SATOSA_SERVICE_URL ? `"${process.env.SATOSA_SERVICE_URL}"` : 'undefined',
-    'process.env.SATOSA_DOCUMENT_ID': process.env.SATOSA_DOCUMENT_ID ? `"${process.env.SATOSA_DOCUMENT_ID}"` : 'undefined'
+    'process.env.SATOSA_DOCUMENT_ID': process.env.SATOSA_DOCUMENT_ID ? `"${process.env.SATOSA_DOCUMENT_ID}"` : 'undefined',
+    'process.env.SATOSA_HOSTED_URL': process.env.SATOSA_HOSTED_URL ? `"${process.env.SATOSA_HOSTED_URL}"` : 'undefined'
   },
   preventAssignment: true
 }
