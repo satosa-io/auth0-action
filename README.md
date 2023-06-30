@@ -9,6 +9,7 @@ $ npm run deploy
 ### Environment Variables
 
 |Environment Variable|Required|Default|Description|
+|:-:|:-:|:-:|:-:|
 |`SATOSA_ORGANIZATION_ID`|Yes||The organization ID of your Satosa tenant|
 |`SATOSA_DOCUMENT_ID`|Yes||The document ID to prompt users to acknowlege when after login|
 |`SATOSA_API_KEY`|Yes||The [API key](https://dashboard.satosa.com/developers) with access to your Satosa tenant|
