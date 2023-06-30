@@ -9,7 +9,7 @@ import { z } from 'zod'
 const SATOSA_ACTION = {
   name: 'satosa',
   code: './actions/satosa/code.js',
-  deployed: false,
+  deployed: true,
   runtime: 'node16',
   status: 'built',
   supported_triggers: [

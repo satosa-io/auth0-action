@@ -7,7 +7,7 @@ export async function onExecutePostLogin (event: any, api: any): Promise<void> {
   const apiKey = event.secrets.API_KEY ?? ''
   const hostedUrl = process.env.SATOSA_HOSTED_URL ?? SATOSA_HOSTED_URL
   const serviceUrl = process.env.SATOSA_SERVICE_URL ?? SATOSA_SERVICE_URL
-  const callbackUrl = process.env.CALLBACK_URL ?? ''
+  const callbackUrl = process.env.CALLBACK_URL ?? `https://${process.env.AUTH0_DOMAIN ?? ''}/continue` ?? ''
   const organizationId = process.env.SATOSA_ORGANIZATION_ID ?? ''
   const documentId = process.env.SATOSA_DOCUMENT_ID ?? ''
   const config = createConfiguration(serviceUrl, apiKey)
@@ -16,10 +16,10 @@ export async function onExecutePostLogin (event: any, api: any): Promise<void> {
   if (!interaction) {
     const session = await createSession(config, {
       userId: user.user_id,
-      email: user.email,
-      givenName: user.given_name,
-      familyName: user.family_name,
-      phoneNumber: user.phone_number
+      email: user.email ?? null,
+      givenName: user.given_name ?? null,
+      familyName: user.family_name ?? null,
+      phoneNumber: user.phone_number ?? null
     })
     const redirectUrl = createRedirectUrl(
       hostedUrl,
@@ -31,3 +31,5 @@ export async function onExecutePostLogin (event: any, api: any): Promise<void> {
     api.redirect.sendUserTo(redirectUrl)
   }
 }
+
+export async function onContinuePostLogin (event: any, api: any): Promise<void> {}

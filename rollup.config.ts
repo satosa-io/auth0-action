@@ -13,6 +13,7 @@ const nodeResolveOptions = {
 
 const replaceConfig = {
   values: {
+    'process.env.AUTH0_DOMAIN': process.env.AUTH0_DOMAIN ? `"${process.env.AUTH0_DOMAIN}"` : 'undefined',
     'process.env.CALLBACK_URL': process.env.CALLBACK_URL ? `"${process.env.CALLBACK_URL}"` : 'undefined',
     'process.env.SATOSA_ORGANIZATION_ID': process.env.SATOSA_ORGANIZATION_ID ? `"${process.env.SATOSA_ORGANIZATION_ID}"` : 'undefined',
     'process.env.SATOSA_SERVICE_URL': process.env.SATOSA_SERVICE_URL ? `"${process.env.SATOSA_SERVICE_URL}"` : 'undefined',
