@@ -15,5 +15,5 @@ $ npm run deploy
 |`SATOSA_API_KEY`|Yes||The [API key](https://dashboard.satosa.com/developers) with access to your Satosa tenant|
 |`CALLBACK_URL`|No|Will use your Auth0 redirect URI|The url to redirect users after acknowledging the document|
 |`AUTH0_DOMAIN`|Yes||Auth0 tenant domain|
-|`AUTH0_CLIENT_ID`||Yes|Auth0 tenant client ID|
-|`AUTH0_CLIENT_SECRET`||Yes|Auth0 tenant client secret|
+|`AUTH0_CLIENT_ID`|Yes||Auth0 tenant client ID|
+|`AUTH0_CLIENT_SECRET`|Yes||Auth0 tenant client secret|
