@@ -7,7 +7,8 @@ export async function onExecutePostLogin (event: any, api: any): Promise<void> {
   const apiKey = event.secrets.API_KEY ?? ''
   const hostedUrl = process.env.SATOSA_HOSTED_URL ?? SATOSA_HOSTED_URL
   const serviceUrl = process.env.SATOSA_SERVICE_URL ?? SATOSA_SERVICE_URL
-  const callbackUrl = process.env.CALLBACK_URL ?? `https://${process.env.AUTH0_DOMAIN ?? ''}/continue` ?? ''
+  const customDomain = process.env.AUTH0_CUSTOM_DOMAIN
+  const callbackUrl = process.env.CALLBACK_URL ?? `https://${customDomain ?? process.env.AUTH0_DOMAIN ?? ''}/continue` ?? ''
   const organizationId = process.env.SATOSA_ORGANIZATION_ID ?? ''
   const documentId = process.env.SATOSA_DOCUMENT_ID ?? ''
   const config = createConfiguration(serviceUrl, apiKey)
