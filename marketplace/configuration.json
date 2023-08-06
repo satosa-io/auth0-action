@@ -1,7 +1,53 @@
 {
   "secrets": [
     {
-      
+      "name": "AUTH0_CUSTOM_DOMAIN",
+      "label": "Auth0 Custom Domain",
+      "description": "Only use this if you're using a custom domain with Auth0",
+      "default_value": "",
+      "deploy_value": ""
+    },
+    {
+      "name": "AUTH0_DOMAIN",
+      "label": "Auth0 Domain",
+      "description": "Domain of your Auth0 tenant",
+      "default_value": "",
+      "deploy_value": ""
+    },
+    {
+      "name": "CALLBACK_URL",
+      "label": "Auth0 Domain",
+      "description": "URL to redirect user after acknowledging the document",
+      "default_value": "",
+      "deploy_value": ""
+    },
+    {
+      "name": "SATOSA_ORGANIZATION_ID",
+      "label": "Satosa Organization ID",
+      "description": "ID of your Satosa organization",
+      "default_value": "",
+      "deploy_value": ""
+    },
+    {
+      "name": "SATOSA_SERVICE_URL",
+      "label": "Satosa Service URL",
+      "description": "URL of for Satosa API requests",
+      "default_value": "https://api.satosa.com",
+      "deploy_value": "https://api.satosa.com"
+    },
+    {
+      "name": "SATOSA_DOCUMENT_ID",
+      "label": "Satosa Document ID",
+      "description": "ID of for Satosa document you wish to collect acknowledgement for",
+      "default_value": "",
+      "deploy_value": ""
+    },
+    {
+      "name": "SATOSA_HOSTED_URL",
+      "label": "Satosa Hosted URL",
+      "description": "URL where the document is hosted at",
+      "default_value": "https://dashboard.satosa.com",
+      "deploy_value": "https://dashboard.satosa.com"
     }
   ],
   "configuration": [],
