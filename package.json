@@ -9,6 +9,7 @@
     "build:ts": "tsc --outDir dist",
     "build:bundle": "rollup -c dist/rollup.config.js --bundleConfigAsCjs",
     "build": "npm run build:ts && npm run build:bundle",
+    "marketplace": "npm run build && cp action.js marketplace/integration.action.js",
     "deploy": "npm run build && npx rollup dist/src/deploy.js --file deploy.js --format cjs -e auth0-deploy-cli && node deploy"
   },
   "repository": {
