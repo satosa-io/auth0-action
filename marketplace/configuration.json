@@ -1,5 +1,14 @@
 {
   "secrets": [],
   "configuration": [],
-  "dependencies": []
+  "dependencies": [
+    {
+      "name": "axios",
+      "version": "1.4.0"
+    },
+    {
+      "name": "zod",
+      "version": "3.21.4"
+    }
+  ]
 }
