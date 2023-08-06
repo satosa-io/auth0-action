@@ -1,5 +1,9 @@
 {
-  "secrets": [],
+  "secrets": [
+    {
+      
+    }
+  ],
   "configuration": [],
   "dependencies": [
     {
