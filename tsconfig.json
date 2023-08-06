@@ -1,5 +1,5 @@
 {
-  "include": [ "rollup.config.ts", "src/**/*.ts" ],
+  "include": [ "rollup.config.ts", "rollup.test.config.ts", "src/**/*.ts", "test/**/*.ts" ],
   "compilerOptions": {
     "skipLibCheck": true,
     "moduleResolution": "node",
