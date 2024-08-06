@@ -1,6 +1,13 @@
 {
   "secrets": [
     {
+      "name": "API_KEY",
+      "label": "Satosa API Key",
+      "description": "The Satosa API Key to use for the integration"
+    }
+  ],
+  "configuration": [
+    {
       "name": "AUTH0_CUSTOM_DOMAIN",
       "label": "Auth0 Custom Domain",
       "description": "Only use this if you're using a custom domain with Auth0",
@@ -50,7 +57,6 @@
       "deploy_value": "https://dashboard.satosa.com"
     }
   ],
-  "configuration": [],
   "dependencies": [
     {
       "name": "axios",
