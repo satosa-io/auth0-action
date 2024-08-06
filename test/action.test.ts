@@ -36,7 +36,7 @@ test('onContinuePostLogin result to be undefined', async () => {
 test('onExecutePostLogin to redirect to hosted document page with session', async () => {
   await onExecutePostLogin(EVENT_MOCK, {
     redirect: {
-      sendUserTo(redirectUrl : string) {
+      sendUserTo (redirectUrl: string) {
         const redirect = new URL(redirectUrl)
         expect(redirect.searchParams.get('sessionId')).toBeDefined()
       }
