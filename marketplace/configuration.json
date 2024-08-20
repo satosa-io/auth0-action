@@ -11,8 +11,8 @@
       "name": "AUTH0_CUSTOM_DOMAIN",
       "label": "Auth0 Custom Domain",
       "description": "Only use this if you're using a custom domain with Auth0",
-      "default_value": "",
-      "deploy_value": ""
+      "default_value": "default",
+      "deploy_value": "default"
     },
     {
       "name": "AUTH0_DOMAIN",
@@ -23,10 +23,10 @@
     },
     {
       "name": "CALLBACK_URL",
-      "label": "Auth0 Domain",
+      "label": "Callback Url",
       "description": "URL to redirect user after acknowledging the document",
-      "default_value": "",
-      "deploy_value": ""
+      "default_value": "default",
+      "deploy_value": "default"
     },
     {
       "name": "SATOSA_ORGANIZATION_ID",
