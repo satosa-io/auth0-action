@@ -2,9 +2,9 @@ import { parseUser } from './auth0'
 import { createConfiguration, getDocument, getInteraction, createSession, createRedirectUrl } from './satosa'
 import { SATOSA_HOSTED_URL, SATOSA_SERVICE_URL } from './constants'
 
-function handleDefaultValue(value : string) : string {
-  if (value === 'default') return '';
-  return value;
+function handleDefaultValue (value: string): string {
+  if (value === 'default') return ''
+  return value
 }
 
 export async function onExecutePostLogin (event: any, api: any): Promise<void> {
@@ -12,10 +12,10 @@ export async function onExecutePostLogin (event: any, api: any): Promise<void> {
   const apiKey = event.secrets.API_KEY ?? ''
   const hostedUrl = process.env?.SATOSA_HOSTED_URL || event.secrets?.SATOSA_HOSTED_URL || event.configuration?.SATOSA_HOSTED_URL || SATOSA_HOSTED_URL
   const serviceUrl = process.env?.SATOSA_SERVICE_URL || event.secrets?.SATOSA_SERVICE_URL || event.configuration?.SATOSA_SERVICE_URL || SATOSA_SERVICE_URL
-  const customDomain = handleDefaultValue(process.env?.AUTH0_CUSTOM_DOMAIN || event.secrets?.AUTH0_CUSTOM_DOMAIN || event.configuration?.AUTH0_CUSTOM_DOMAIN || '');
+  const customDomain = handleDefaultValue(process.env?.AUTH0_CUSTOM_DOMAIN || event.secrets?.AUTH0_CUSTOM_DOMAIN || event.configuration?.AUTH0_CUSTOM_DOMAIN || '')
   const authDomain = customDomain || process.env?.AUTH0_DOMAIN || event.secrets?.AUTH0_DOMAIN || event.configuration?.AUTH0_DOMAIN || ''
   const continueUrl = `https://${authDomain as string}/continue`
-  const callbackUrl = handleDefaultValue(process.env?.CALLBACK_URL || event.secrets?.CALLBACK_URL || event.configuration?.CALLBACK_URL || continueUrl);
+  const callbackUrl = handleDefaultValue(process.env?.CALLBACK_URL || event.secrets?.CALLBACK_URL || event.configuration?.CALLBACK_URL || continueUrl)
   const organizationId = process.env?.SATOSA_ORGANIZATION_ID || event.secrets?.SATOSA_ORGANIZATION_ID || event.configuration?.SATOSA_ORGANIZATION_ID || ''
   const documentId = process.env?.SATOSA_DOCUMENT_ID || event.secrets?.SATOSA_DOCUMENT_ID || event.configuration?.SATOSA_DOCUMENT_ID || ''
   const config = createConfiguration(serviceUrl, apiKey)
