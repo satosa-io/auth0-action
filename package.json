@@ -30,7 +30,7 @@
     "@types/jest": "^29.5.3",
     "@types/node": "^20.3.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "auth0-deploy-cli": "^7.17.6",
+    "auth0-deploy-cli": "7.24.2",
     "eslint": "^8.43.0",
     "eslint-config-standard-with-typescript": "^35.0.0",
     "eslint-plugin-import": "^2.27.5",
